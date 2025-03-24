@@ -1,0 +1,17 @@
+[Unit]
+Description=fastauthd
+After=network.target
+
+[Service]
+Type=notify
+NotifyAccess=all
+
+ExecStart=/usr/bin/fastauthd
+Restart=on-failure
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+ProtectClock=yes
+ProtectKernelLogs=yes
+ProtectHostname=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes

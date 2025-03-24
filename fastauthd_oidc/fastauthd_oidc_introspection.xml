@@ -1,0 +1,29 @@
+<node>
+  <interface name='com.fastauthd.oidc.deviceflow'>
+    <method name='request_device_code'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='s' name='clientid' direction='in'/>
+      <arg type='s' name='tenantid' direction='in'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='refresh_device_code'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='s' name='clientid' direction='in'/>
+      <arg type='s' name='tenantid' direction='in'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='query_msa_auth_result'>
+      <arg type='s' name='devicecode' direction='in'/>
+      <arg type='s' name='clientid' direction='in'/>
+      <arg type='s' name='tenantid' direciton='in'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='verify_user_and_group'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='s' name='accesstoken' direction='in'/>
+      <arg type='s' name='tokentype' direction='in'/>
+      <arg type='s' name='groupid' direction='in'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+  </interface>
+</node>

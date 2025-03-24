@@ -1,0 +1,39 @@
+<node>
+  <interface name='com.fastauthd.broker.deviceflow'>
+    <method name='request_device_code'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='i' name='returncode' direction='out'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='refresh_device_code'>
+      <arg type='i' name='returncode' direction='out'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='query_fastauthd_nssdb'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='i' name="returncode" direction='out'/>
+      <arg type='s' name='usrpwdinfo' direction='out'/>
+    </method>
+    <method name='query_msa_auth_result'>
+      <arg type='s' name='devicecode' direction='in'/>
+      <arg type='i' name='returncode' direction='out'/>
+      <arg type='s' name='accesstoken' direction='out'/>      
+    </method>
+    <method name='verify_user_and_group'>
+      <arg type='s' name='username' direction='in'/>
+      <arg type='s' name='accesstoken' direction='in'/>
+      <arg type='s' name='tokentype' direction='in'/>
+      <arg type='i' name='returncode' direction='out'/>
+      <arg type='s' name='response' direction='out'/>
+    </method>
+
+    <!-- <method name='request_access_token'>
+      <arg type='s' name='param' direction='in'/>
+        <arg type='s' name='response' direction='out'/>
+    </method>
+    <method name='query_nssdb'>
+      <arg type='s' name='param' direction='in'/>
+        <arg type='s' name='response' direction='out'/>
+    </method> -->
+  </interface>
+</node>
